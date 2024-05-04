@@ -1,0 +1,72 @@
+import React, { useState } from 'react';
+import { SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
+
+export default function App() {
+  const [rememberMe, setRememberMe] = useState(false);
+
+  return (
+    <SafeAreaView style={styles.container}>
+    
+        <View style={styles.contentContainer}>
+          <Text style={styles.vanmoosh}>Vanmoosh</Text>
+          <Text style={styles.acessar}>Acessar com:</Text>
+          <TouchableOpacity style={styles.user1Button}>
+            <Text style={[styles.buttonText, { color: 'black' }]}>user123@gmail.com</Text>
+          </TouchableOpacity>
+          <View style={styles.bottomTextContainer}>
+            <TouchableOpacity style={styles.user2Button}>
+            <Text style={[styles.buttonText, { color: 'black' }]}>user321@gmail.com</Text>
+          </TouchableOpacity>
+          </View>
+        </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  contentContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+  },
+  vanmoosh: {
+    color: '#FFCC00', 
+    fontSize: 32,
+    fontWeight: 'bold',
+    marginBottom:100,
+    marginLeft: 135, 
+  },
+  acessar: {
+    color: '#FFCC00', 
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 50,
+    marginLeft: 115, 
+  },
+  user1Button: {
+    backgroundColor: 'white',
+    borderColor: 'black',
+    padding: 15,
+    alignItems: 'left',
+    marginBottom: 0,
+  },
+  user2Button: {
+    flex: 1,
+    backgroundColor: 'white',
+    borderColor: 'black',
+    padding: 15,
+    alignItems: 'left',
+    marginBottom: 530,
+  },
+  buttonText: {
+    fontSize: 16,
+  },
+  bottomTextContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20,
+  },
+});
